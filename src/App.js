@@ -1,4 +1,5 @@
 import { Navbar } from './components/Navbar';
+import { ProductDetails } from './components/ProductDetails';
 import { Slider } from './components/Slider/Slider';
 
 import { images } from './services/images.js';
@@ -12,10 +13,7 @@ function App() {
 
       <main className="product-container">
         <Slider images={images} />
-
-        <p>
-          Some text
-        </p>
+        <ProductDetails />
       </main>
     </div>
   );

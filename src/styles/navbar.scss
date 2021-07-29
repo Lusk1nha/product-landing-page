@@ -18,7 +18,10 @@
 
   padding: 1.5rem 8%;
 
+  z-index: 1;
+
   @include mobile {
+    background-color: rgb(247, 237, 152);
     flex-direction: column;
   }
   
@@ -112,7 +115,13 @@
         display: flex;
         justify-content: flex-start;
 
+        color: black;
+
         margin: 0.6rem 0;
+
+        &:hover {
+          color: rgb(41, 40, 40);
+        }
       }
     }
   }

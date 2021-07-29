@@ -4,8 +4,7 @@
   max-width: 450px;
   width: 100%;
 
-  min-height: 350px;
-  height: 380px;
+  height: 350px;
 
   display: flex;
   flex-direction: column;
@@ -14,17 +13,20 @@
 
   position: relative;
 
+  margin-bottom: 1rem;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
   overflow: hidden;
 }
 
 .slider-content {
+  width: 100%;
+  height: 100%;
+
   display: flex;
-
-  width: 100vw;
-  height: 90%;
-
-  transform: translateX(-0px);
-  transition: transform ease-out 0.45s;
+  align-items: center;
 }
 
 .slide {
@@ -36,34 +38,38 @@
 
   width: 100%;
   height: 100%;
+
+  border-radius: 0.5rem;
+  
 }
 
-.arrow-container {
+.dots-container {
   width: 100%;
+  height: 50px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 1rem 0;
-}
+  position: absolute;
+  bottom: 0rem;
 
-.arrow {
-  width: auto;
+  user-select: none;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .dot {
+    background-color: rgba(95, 94, 94, 0.829);
 
-  margin: 0 0.5rem;
+    margin: 0 0.3rem;
 
-  transition: transform ease-in 0.1s;
+    border-radius: 50%;
 
-  &:hover {
-    transform: scale(1.1);
-  }
+    padding: 0.45rem;
+    
+    cursor: pointer;
 
-  img {
-    width: 30px;
+    &.active {
+      background-color: rgba(255, 255, 255, 0.589);
+      cursor: default;
+    }
   }
 }
