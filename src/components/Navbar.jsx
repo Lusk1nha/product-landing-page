@@ -15,7 +15,7 @@ export function Navbar() {
   return (
     <div className={menu ? "navbar mobile" : "navbar"}>
       <div className="nav-interactions">
-        <h2 className="title">$neakers</h2>
+        <h2 className="title">Quadros</h2>
         
         <img 
           className="mobile nav-icon" 

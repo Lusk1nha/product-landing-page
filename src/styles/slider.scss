@@ -12,13 +12,17 @@
   justify-content: center;
 
   position: relative;
-
-  margin-bottom: 1rem;
+  
+  margin-right: 2rem; 
 
   border-radius: 0.5rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 
   overflow: hidden;
+
+  @include mobile {
+    margin: 5rem 0 2rem;
+  }
 }
 
 .slider-content {
@@ -63,13 +67,34 @@
 
     border-radius: 50%;
 
+    position: relative;
+
     padding: 0.45rem;
     
     cursor: pointer;
 
     &.active {
-      background-color: rgba(255, 255, 255, 0.589);
       cursor: default;
+    }
+
+    &.active::before {
+      content: '';
+
+      background-color: white;
+      
+      width: 85%;
+      height: 85%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      margin: auto;
+
+      border-radius: 50%;
+
     }
   }
 }
